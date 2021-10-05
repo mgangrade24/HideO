@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}HideO - A Steganography Tool{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='images/logo1.png') }}" width="" height="50" alt="">
+      </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto mx-3">
+            <li class="nav-item active px-2">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item px-2">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item px-2">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+        <a class="btn btn-dark" href="/logout" role="button">Log Out</a>
+      </div>
+    </nav>
+
+    <div class="jumbotron my-5 container-fluid">
+      <h1 class="display-4">Welcome <b>{{name}}</b>!</h1>
+      <p class="lead">Send your messages securely by hiding them into image!</p>
+    </div>
+
+    <h1 class="text-center">Hide</h1><hr class="my-3 mx-5">
+
+    <div class="container">
+      <div class="row row-grid">
+        <div class="card col-sm-12 col-md-4 col-lg-4 mx-auto my-auto pt-4 bg-light" style="width: 18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <img class="card-img-top my-3" src="{{ url_for('static', filename='images/txttoimg.png') }}" alt="Card image cap">
+          <div class="card-body mx-auto">
+            <a href="/txttoimg" class="btn btn-primary">Hide</a>
+          </div>
+        </div>
+        <div class="card col-sm-12 col-md-4 col-lg-4 mx-auto my-auto pt-4 bg-light" style="width: 18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <img class="card-img-top my-3" src="{{ url_for('static', filename='images/imgintoimg.png') }}" alt="Card image cap">
+          <div class="card-body mx-auto">
+            <a href="#" class="btn btn-primary">Hide</a>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+
+    <h1 class="text-center">Unhide</h1><hr class="my-3 mx-5">
+
+    <div class="container">
+      <div class="row row-grid">
+        <div class="card col-sm-12 col-md-4 col-lg-4 mx-auto my-auto pt-4 bg-light" style="width: 18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <img class="card-img-top my-3" src="{{ url_for('static', filename='images/imgtotxt.png') }}" alt="Card image cap">
+          <div class="card-body mx-auto">
+            <a href="#" class="btn btn-primary">Unhide</a>
+          </div>
+        </div>
+        
+        <div class="card col-sm-12 col-md-4 col-lg-4 mx-auto my-auto pt-4 bg-light" style="width: 18rem; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <img class="card-img-top my-3" src="{{ url_for('static', filename='images/imgfromimg.png') }}" alt="Card image cap">
+          <div class="card-body mx-auto">
+            <a href="#" class="btn btn-primary">Unhide</a>
+          </div>
+        </div>
+      </div>
+    </div><br><br><br>
+
+
+  {% endblock %}

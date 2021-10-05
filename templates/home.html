@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}HideO - A Steganography Tool{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+  <a class="navbar-brand" href="#">
+      <img src="{{ url_for('static', filename='images/logo1.png') }}" width="" height="50" alt="">
+    </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto mx-3">
+          <li class="nav-item active px-2">
+              <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item px-2">
+              <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item px-2">
+              <a class="nav-link" href="#">Contact Us</a>
+          </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div class="jumbotron my-5 container-fluid">
+      <h1 class="display-4">Welcome To HideO</h1>
+      <p class="lead">This is a utility tool based on the concept of steganography which lets you to hide your secret data into images.</p>
+      <hr class="my-4">
+      <p>Just register, upload the cover image, give the secret data and thats all!.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/register" role="button">Register</a>
+        <a class="btn btn-outline-success btn-lg" href="/login" role="button">Login</a>
+      </p>
+    </div>
+
+{% endblock %}
