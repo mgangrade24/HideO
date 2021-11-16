@@ -17,19 +17,3 @@ $(document).on("click", ".browse", function() {
 
 
 
-  $(document).on("click", ".browse1", function() {
-    var file = $(this).parents().find(".file1");
-    file.trigger("click");
-  });
-  $('input[type="file"]').change(function(e) {
-    var fileName1 = e.target.files[1].name;
-    $("#file1").val(fileName1);
-  
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      // get loaded data and render thumbnail.
-      document.getElementById("preview1").src = e.target.result;
-    };
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[1]);
-  });

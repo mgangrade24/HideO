@@ -54,7 +54,7 @@
             
             <div class="row">
               <div class="col-lg-8">
-                  <h1 class="display-4">Unhide Secret Text Data From The Stego Image!</h1>
+                  <h1 class="display-4">Unhide Secret Image From The Stego Image!</h1>
                   <p class="lead">Enter the stego key, choose the encryption algorithm, upload the stego image and thats all!</p>
               </div>
               <div class="col-lg-4 align-items-center d-flex">
@@ -67,33 +67,8 @@
         </div>
 
         <div class="container">
-          {% include "includes/_message.html" %}
-          <form action="{{ url_for('imgtotxt') }}" method="post" enctype="multipart/form-data">
-            <div class="form-group row">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">Stego Key</label>
-              <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3" name="key" required placeholder="Stego Key">
-              </div>
-            </div>
-            <fieldset class="form-group">
-              <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Encryption Algorithm</legend>
-                <div class="col-sm-10">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="algo" id="aes" value="aes" checked>
-                    <label class="form-check-label" for="gridRadios1">
-                      AES
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="algo" id="des" value="des">
-                    <label class="form-check-label" for="gridRadios2">
-                      DES
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
+          <form action="/imgfromimg" method="post" enctype="multipart/form-data">
+            
             <div class="form-group row">
               <label for="inputEmail3" class="col-sm-2 col-form-label">Upload Stego Image</label>
               <div class="col-sm-10">
